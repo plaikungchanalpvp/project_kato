@@ -1,3 +1,4 @@
+import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 
 var map = L.map('map').setView([18.7953, 98.9620], 15);
