@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap');
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+    font-family: 'Kanit', sans-serif;
+}
+
+.map-wrap {
+    position: relative;
+    min-height: 320px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.map {
+    position: absolute;
+    inset: 0;
+}
+
+.map-label {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background: #0f172a;
+    color: #fff;
+    padding: 4px 16px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 14px;
+    pointer-events: none;
+}
+
+.map-status {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.filter-btn {
+    border: 2px solid var(--c);
+    color: var(--c);
+    background: #fff;
+    padding: 3px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.filter-btn:hover {
+    opacity: 0.85;
+}
+
+.filter-btn.active {
+    background: var(--c);
+    color: #fff;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 3px;
+    margin-right: 6px;
+}
+
+table.summary {
+    width: 100%;
+    font-size: 13px;
+    border-collapse: collapse;
+}
+
+table.summary th {
+    background: #f1f5f9;
+    padding: 6px;
+    text-align: right;
+    font-weight: 600;
+}
+
+table.summary td {
+    padding: 6px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+table.summary .num {
+    text-align: right;
+    white-space: nowrap;
+}
+
+table.summary tfoot td {
+    font-weight: 600;
+    background: #f8fafc;
+}
+
+.up {
+    color: #16a34a;
+}
+
+.down {
+    color: #dc2626;
+}
+
+.leaflet-popup-content {
+    font-family: 'Kanit', sans-serif;
+    line-height: 1.6;
+}

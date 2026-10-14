@@ -1,5 +1,13 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-    base: '/lab_6leafletjs/', // <--- เปลี่ยนให้ตรงกับชื่อรีโปใหม่
+    root: 'www',
+    server: {
+        port: 3000,
+        open: true
+    },
+    build: {
+        outDir: '../dist',
+        emptyOutDir: true
+    }
 })

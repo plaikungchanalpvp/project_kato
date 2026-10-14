@@ -1,0 +1,2 @@
+export const SUPABASE_URL = 'https://klkscpvmanfodtosbdxk.supabase.co'
+export const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtsa3NjcHZtYW5mb2R0b3NiZHhrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE5MTM4NzQsImV4cCI6MjEwNzQ4OTg3NH0.SvR3JqFdS4s9NeMJ686AIE5rXh8xkHGUTB8DV6xXy-o'

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>เปรียบเทียบการใช้ประโยชน์ที่ดิน เชียงใหม่ 2558 vs 2567</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body class="bg-slate-100 text-slate-800">
+    <div class="flex h-screen flex-col">
+
+        <header class="flex flex-wrap items-center justify-between gap-3 bg-white px-5 py-3 shadow">
+            <div>
+                <h1 class="text-xl font-bold">เปรียบเทียบการใช้ประโยชน์ที่ดิน จ.เชียงใหม่</h1>
+                <p class="text-sm text-slate-500">ปี 2558 เทียบกับ ปี 2567 — เลื่อนแผนที่ฝั่งไหน อีกฝั่งจะตามไปด้วย</p>
+            </div>
+            <div id="filters" class="flex flex-wrap gap-2"></div>
+        </header>
+
+        <main class="flex min-h-0 flex-1 flex-col overflow-y-auto lg:flex-row lg:overflow-hidden">
+
+            <section class="grid min-h-[660px] flex-1 grid-cols-1 gap-1 p-1 md:min-h-0 md:grid-cols-2">
+                <div class="map-wrap">
+                    <div id="map-2558" class="map"></div>
+                    <div class="map-label">ปี 2558</div>
+                    <div id="status-2558" class="map-status">กำลังเตรียม...</div>
+                </div>
+                <div class="map-wrap">
+                    <div id="map-2567" class="map"></div>
+                    <div class="map-label">ปี 2567</div>
+                    <div id="status-2567" class="map-status">กำลังเตรียม...</div>
+                </div>
+            </section>
+
+            <aside class="w-full bg-white p-4 lg:w-[430px] lg:overflow-y-auto">
+                <h2 class="mb-1 text-lg font-bold">สรุปพื้นที่ทั้งจังหวัด</h2>
+                <p class="mb-3 text-xs text-slate-500">หน่วย: ไร่</p>
+
+                <div class="mb-4 rounded-lg border p-2">
+                    <canvas id="chart" height="260"></canvas>
+                </div>
+
+                <table class="summary">
+                    <thead>
+                        <tr>
+                            <th class="text-left">ประเภท</th>
+                            <th>2558</th>
+                            <th>2567</th>
+                            <th>เปลี่ยนแปลง</th>
+                            <th>%</th>
+                        </tr>
+                    </thead>
+                    <tbody id="summary-body">
+                        <tr>
+                            <td colspan="5" class="py-4 text-center text-slate-400">กำลังโหลด...</td>
+                        </tr>
+                    </tbody>
+                    <tfoot id="summary-foot"></tfoot>
+                </table>
+
+                <p class="mt-4 text-xs text-slate-400">
+                    แผนที่จะแสดงแปลงที่ดินเมื่อซูมระดับ 12 ขึ้นไป (สูงสุด 4,000 แปลงต่อจอ)
+                </p>
+            </aside>
+
+        </main>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+</body>
+
+</html>
